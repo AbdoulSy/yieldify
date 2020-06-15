@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Yieldify test</title>
+    </head>
+    <body>
+        <style>
+            html,body,svg { height:100%; overflow: hidden; }
+            h1, #controls { position: absolute ; margin: 0; padding: 0; overflow: hidden;}
+        </style>
+        <div id="app">
+            <div id="resizableLayout" class="layout" role="main">
+                <h1 role="title">Yieldify Test</h1>
+                <svg id="world" data-testid="world" xmlns="http://www.w3.org/2000/svg">
+                    <g id="bubbles-area"></g>
+                </svg>
+
+                <div style="display:none" role="controls" id="controls" class="overlayLeft">
+                    <label>
+                        x pixels in meters(m)
+                        <input type="range" min="1" max="1024" >
+                    </label>
+                    <label>
+                        x frames in seconds(m)
+                        <input type="range" min="1" max="1024" >
+                    </label>
+                </div>
+                <div class="devTool" id="indicator">
+                </div>
+            </div>
+        </div>
+        <script src="../src/app.mjs"></script>
+    </body>
+</html>
